@@ -1,0 +1,18 @@
+{
+    'degreeName'
+    'degreecode'
+    'handbookURL'
+    'noUOC'
+    'courses' : [
+        
+        {
+            'courseName'
+            'courseCode'
+            'termOffering'
+            'preRequisites'
+            'handbookURL'
+            'Level'
+            'label'
+        }
+    ]
+}
