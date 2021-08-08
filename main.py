@@ -1,4 +1,4 @@
-from selenium import webdriver
+#from selenium import webdriver
 import requests
 import json
 import course
@@ -39,7 +39,7 @@ def main():
     #    print(key)
 
     
-    f = open("container.txt", "a")
+    f = open("container.txt", "w")
     f.write(json.dumps(curriculumStructure['container'][0]))
     f.close()
 

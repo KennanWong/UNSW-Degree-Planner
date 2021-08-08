@@ -3,16 +3,21 @@
     'degreecode'
     'handbookURL'
     'noUOC'
+    'implementationYear'
     'courses' : [
         
         {
             'courseName'
             'courseCode'
             'termOffering'
-            'preRequisites'
+            'requisitesType'
+            'requisites'
+            'Exclusions' 
             'handbookURL'
-            'Level'
-            'label'
+            'creditPoints'
+            'apiURL
+            'level'
+            'order'
         }
     ]
 }
