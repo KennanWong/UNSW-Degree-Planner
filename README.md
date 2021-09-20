@@ -7,4 +7,5 @@ Change log
         can be succesffully parsed into the program
 
 
-20.09:  Created the front end for the application. Able to make calls to back end and display core courses
+20/09:  - Created the front end for the application. Able to make calls to back end and display core courses
+        - Implemented api to add a course to a given term

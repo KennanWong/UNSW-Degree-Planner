@@ -42,7 +42,7 @@ def initialiseDegree(degreeCode, implementationYear):
 
     degreeFileName = degreeCode+'_'+implementationYear
 
-    if (os.path.isfile('./degree_saves/'+degreeFileName+'.json') and not disableLoading):
+    if (os.path.isfile(degreeFileName+'.json') and not disableLoading):
         print("loading from save")
         degreeSave = open(degreeFileName+'.json', 'r')
         degreeJSON = json.load(degreeSave)
@@ -89,6 +89,9 @@ def initialiseDegree(degreeCode, implementationYear):
     print("Finished initilaising degree")
     degreeLoaded += 1
     return 'Done'
+
+def getDegreeJSON():
+    return degreeJSON
     
 def getDegreeCode():
     return degreeJSON['degreeCode']

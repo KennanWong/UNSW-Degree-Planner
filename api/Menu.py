@@ -2,6 +2,8 @@ from flask import Blueprint, jsonify, request
 
 from . import Degree 
 from . import Course 
+from . import planDegree
+
 
 SUCESS = '200'
 
@@ -64,3 +66,21 @@ def search_course_list():
 
     return jsonify({'courses': ret})
 
+@main.route('/intialise_degree_plan', methods = ['POST'])
+def initialise_degree_plan():
+    planDegree.initialisePlan(Degree.getDegreeJSON())
+    return SUCESS
+
+@main.route('/display_degree_plan', methods = ['POST'])
+def display_degree_plan():
+    planDegree.displayDegreePlan()
+    return SUCESS
+
+@main.route('/add_course_to_term', methods = ['POST'])
+def add_degree_to_term():
+    payload = request.get_json()
+    ret = planDegree.addCourseToTerm(payload['term'], payload['year'], payload['courseCode'])
+    if ret is None:
+        return SUCESS
+    else:
+        return ret
